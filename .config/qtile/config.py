@@ -146,7 +146,7 @@ screens = [
             size=30,
             background=gb["bg4"],
             border_width=0,
-            margin=[12, 12, 0, 12],
+            margin=[0, 0, 6, 0],
             widgets=[
                 widget.Spacer(length=9, background=gb["bg0_h"], foreground=gb["fg"]),
                 widget.TextBox(
@@ -193,13 +193,6 @@ screens = [
                     foreground=gb["fg"],
                 ),
                 widget.Spacer(length=12, background=gb["bg2"]),
-                # widget.TextBox(
-                #     background=gb["bg4"],
-                #     foreground=gb["bg2"],
-                #     fmt="",
-                #     fontsize=30,
-                #     padding=0,
-                # ),
                 widget.TextBox(
                     background=gb["bg2"],
                     foreground=gb["bg0_s"],
@@ -288,12 +281,7 @@ floating_layout = layout.Floating(
 auto_fullscreen = True
 focus_on_window_activation = "smart"
 reconfigure_screens = True
-
-# If things like steam games want to auto-minimize themselves when losing
-# focus, should we respect this or not?
 auto_minimize = True
-
-# When using the Wayland backend, this can be used to configure input devices.
 wl_input_rules = None
 
 # XXX: Gasp! We're lying here. In fact, nobody really uses or cares about this
@@ -304,7 +292,7 @@ wl_input_rules = None
 #
 # We choose LG3D to maximize irony: it is a 3D non-reparenting WM written in
 # java that happens to be on java's whitelist.
-wmname = "Qtile"
+wmname = "LG3D"
 
 
 @hook.subscribe.startup_once

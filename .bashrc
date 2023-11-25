@@ -112,5 +112,4 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export STARSHIP_CONFIG="$HOME/dotfiles/starship/starship.toml"
 eval "$(starship init bash)"
